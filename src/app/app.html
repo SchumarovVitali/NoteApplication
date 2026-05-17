@@ -1,3 +1,15 @@
-<app-button-component buttonTitle='delete'></app-button-component>
-<app-button-component buttonTitle='save'></app-button-component>
+<header>
+  <h2>Note - Application</h2>
+</header>
+<div>
+  <app-input-field-component [inputMessage] = 'counterForTrigger()'></app-input-field-component>
+  <app-button-component [ButtonTitle] = "'Save'" (ButtonTrigger)="ButtonTriggerReceive($event)"></app-button-component>
+  <app-button-component [ButtonTitle]="'Delete'"  (ButtonTrigger)="ButtonTriggerReceive($event)"></app-button-component>
+</div>
+<hr>
+<div class="notes">
+  <app-note-component></app-note-component>
+  <app-note-component></app-note-component>
+  <app-note-component></app-note-component>
+</div>
 
